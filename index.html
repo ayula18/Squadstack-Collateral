@@ -20,9 +20,12 @@
       </a>
       <div class="nav-links">
         <a href="#first-principles" class="nav-link">First Principles</a>
+        <a href="#levers" class="nav-link">Levers</a>
         <a href="#verticals" class="nav-link">Verticals</a>
         <a href="#scorecard" class="nav-link">Scorecard</a>
+        <a href="#revenue" class="nav-link">Revenue</a>
         <a href="#gtm" class="nav-link">GTM Playbook</a>
+        <a href="#risks" class="nav-link">Risks</a>
         <a href="#execution" class="nav-link">Execution</a>
       </div>
     </div>
@@ -169,6 +172,68 @@
     </div>
   </section>
 
+  <!-- ═══════════════════ SIX LEVERS ═══════════════════ -->
+  <section id="levers" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Section 01B</span>
+        <h2 class="section-title">The Six Levers of Profit</h2>
+        <p class="section-desc">Ranked by profit impact — improving any of these by 15–20% drives outsized returns across all new verticals.</p>
+      </div>
+
+      <div class="levers-grid">
+        <div class="lever-card" data-rank="1">
+          <div class="lever-rank">01</div>
+          <div class="lever-info">
+            <h3 class="lever-title">AI Coverage of Talk Minutes</h3>
+            <p class="lever-mechanism">Reduces <strong>Human_Talk_Minutes × Agent_Payout</strong></p>
+            <span class="lever-timeline lever-timeline-fast">⚡ Immediate</span>
+          </div>
+        </div>
+        <div class="lever-card" data-rank="2">
+          <div class="lever-rank">02</div>
+          <div class="lever-info">
+            <h3 class="lever-title">Conversion Probability</h3>
+            <p class="lever-mechanism">Lifts <strong>Success_Fee</strong> yield per lead</p>
+            <span class="lever-timeline lever-timeline-fast">1–3 months</span>
+          </div>
+        </div>
+        <div class="lever-card" data-rank="3">
+          <div class="lever-rank">03</div>
+          <div class="lever-info">
+            <h3 class="lever-title">Agent Time-to-Productivity</h3>
+            <p class="lever-mechanism">Shrinks <strong>Agent_Sourcing_Training</strong> per campaign</p>
+            <span class="lever-timeline">2–4 months</span>
+          </div>
+        </div>
+        <div class="lever-card" data-rank="4">
+          <div class="lever-rank">04</div>
+          <div class="lever-info">
+            <h3 class="lever-title">Lead Validity Rate</h3>
+            <p class="lever-mechanism">Protects per-lead economics from <strong>dead leads</strong></p>
+            <span class="lever-timeline lever-timeline-fast">⚡ Immediate</span>
+          </div>
+        </div>
+        <div class="lever-card" data-rank="5">
+          <div class="lever-rank">05</div>
+          <div class="lever-info">
+            <h3 class="lever-title">Outcome-Based Pricing Mix</h3>
+            <p class="lever-mechanism">Shifts revenue upside from <strong>volume to value</strong></p>
+            <span class="lever-timeline">3–6 months</span>
+          </div>
+        </div>
+        <div class="lever-card" data-rank="6">
+          <div class="lever-rank">06</div>
+          <div class="lever-info">
+            <h3 class="lever-title">Vertical Mix</h3>
+            <p class="lever-mechanism">Reallocates capacity toward <strong>highest-margin segments</strong></p>
+            <span class="lever-timeline lever-timeline-slow">6–18 months</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════ BATTLE OF VERTICALS ═══════════════════ -->
   <section id="verticals" class="section section-dark">
     <div class="container">
@@ -207,6 +272,29 @@
                 <h4>SquadStack Fit</h4>
                 <p>While volume is high, AI cannot close a <strong>₹2 Lakh course</strong>. It requires high-tier human counselors (<span class="highlight-red">High Supply Friction</span>). If an agent churns, retraining is a massive drag on margins.</p>
               </div>
+              <!-- TAM Funnel -->
+              <div class="panel-funnel">
+                <h4>Market Funnel</h4>
+                <div class="funnel">
+                  <div class="funnel-tier funnel-tam"><span class="funnel-label">TAM</span><span class="funnel-value">₹100Cr+ telecalling market</span></div>
+                  <div class="funnel-tier funnel-sam"><span class="funnel-label">SAM</span><span class="funnel-value">20–30 platforms (₹10–30Cr/yr each)</span></div>
+                  <div class="funnel-tier funnel-som"><span class="funnel-label">SOM Y1</span><span class="funnel-value">1–3 logos → ₹1–3Cr</span></div>
+                </div>
+              </div>
+              <!-- Call Type Breakdown -->
+              <div class="panel-calltype">
+                <h4>Call-Type AI Suitability</h4>
+                <div class="calltype-bar-container">
+                  <div class="calltype-bar">
+                    <div class="calltype-segment calltype-ai" style="width:65%"><span>65% AI</span></div>
+                    <div class="calltype-segment calltype-human" style="width:35%"><span>35% Human</span></div>
+                  </div>
+                  <div class="calltype-legend">
+                    <span class="calltype-item calltype-item-ai">FAQ, Billing</span>
+                    <span class="calltype-item calltype-item-human">Counseling, Emotional</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="panel-score">
               <div class="score-total">
@@ -222,7 +310,7 @@
         <div class="vertical-panel" id="panel-healthcare">
           <div class="panel-content">
             <div class="panel-info">
-              <div class="panel-tag">Healthcare & Clinics</div>
+              <div class="panel-tag">Healthcare &amp; Clinics</div>
               <h3 class="panel-title">Diagnostic Chains, Mid-sized Clinics</h3>
               <div class="panel-block">
                 <h4>The Reality</h4>
@@ -231,6 +319,29 @@
               <div class="panel-block">
                 <h4>SquadStack Fit</h4>
                 <p>AI-readiness is <strong>perfect</strong> (transactional appointment bookings). However, the market is <span class="highlight-amber">highly fragmented</span>. Selling to 100 clinics to equal the ACV of one enterprise deal creates a massive sales bottleneck.</p>
+              </div>
+              <!-- TAM Funnel -->
+              <div class="panel-funnel">
+                <h4>Market Funnel</h4>
+                <div class="funnel">
+                  <div class="funnel-tier funnel-tam"><span class="funnel-label">TAM</span><span class="funnel-value">Hundreds of Cr (organized clinics)</span></div>
+                  <div class="funnel-tier funnel-sam"><span class="funnel-label">SAM</span><span class="funnel-value">Clinic chains + diagnostic networks</span></div>
+                  <div class="funnel-tier funnel-som"><span class="funnel-label">SOM Y1</span><span class="funnel-value">1–2 chains → ₹1–2Cr</span></div>
+                </div>
+              </div>
+              <!-- Call Type Breakdown -->
+              <div class="panel-calltype">
+                <h4>Call-Type AI Suitability</h4>
+                <div class="calltype-bar-container">
+                  <div class="calltype-bar">
+                    <div class="calltype-segment calltype-ai" style="width:88%"><span>88% AI</span></div>
+                    <div class="calltype-segment calltype-human" style="width:12%"><span>12%</span></div>
+                  </div>
+                  <div class="calltype-legend">
+                    <span class="calltype-item calltype-item-ai">Booking, Reschedule, Info, Reminders</span>
+                    <span class="calltype-item calltype-item-human">Medical Queries</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="panel-score">
@@ -256,6 +367,29 @@
               <div class="panel-block">
                 <h4>SquadStack Fit</h4>
                 <p>The <strong>holy grail</strong>. AI can instantly dial the lead in <span class="highlight-green">30 seconds</span>, ask standard filtering questions (Budget? 2BHK/3BHK? Location?), and pass only verified, high-intent leads to human closers.</p>
+              </div>
+              <!-- TAM Funnel -->
+              <div class="panel-funnel">
+                <h4>Market Funnel</h4>
+                <div class="funnel">
+                  <div class="funnel-tier funnel-tam"><span class="funnel-label">TAM</span><span class="funnel-value">Multi-hundred Cr (telecalling market)</span></div>
+                  <div class="funnel-tier funnel-sam"><span class="funnel-label">SAM</span><span class="funnel-value">30–40 developers (₹2–5Cr/yr each)</span></div>
+                  <div class="funnel-tier funnel-som"><span class="funnel-label">SOM Y1</span><span class="funnel-value">3–5 logos → ₹2–4Cr</span></div>
+                </div>
+              </div>
+              <!-- Call Type Breakdown -->
+              <div class="panel-calltype">
+                <h4>Call-Type AI Suitability</h4>
+                <div class="calltype-bar-container">
+                  <div class="calltype-bar">
+                    <div class="calltype-segment calltype-ai" style="width:70%"><span>70% AI</span></div>
+                    <div class="calltype-segment calltype-human" style="width:30%"><span>30% Human</span></div>
+                  </div>
+                  <div class="calltype-legend">
+                    <span class="calltype-item calltype-item-ai">Qualification, Follow-up, Scheduling</span>
+                    <span class="calltype-item calltype-item-human">Negotiation, Objection Handling</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="panel-score panel-score-winner">
@@ -388,6 +522,113 @@
     </div>
   </section>
 
+  <!-- ═══════════════════ REVENUE TRAJECTORIES ═══════════════════ -->
+  <section id="revenue" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Section 03B</span>
+        <h2 class="section-title">Y1–Y3 Revenue Trajectories</h2>
+        <p class="section-desc">Directional revenue projections across two scenarios — Conservative and Aggressive execution.</p>
+      </div>
+
+      <div class="revenue-scenarios">
+        <!-- Realistic Case -->
+        <div class="revenue-card">
+          <div class="revenue-card-header">
+            <span class="revenue-card-badge">📊 Conservative</span>
+            <h3>Realistic Case</h3>
+          </div>
+          <table class="revenue-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>🏠 Real Estate</th>
+                <th>🏥 Healthcare</th>
+                <th>🎓 EdTech</th>
+                <th class="rev-combined">Combined</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rev-year">Y1</td>
+                <td>₹2–4Cr</td>
+                <td>₹1–2Cr</td>
+                <td>₹1–3Cr</td>
+                <td class="rev-combined"><strong>₹4–9Cr</strong></td>
+              </tr>
+              <tr>
+                <td class="rev-year">Y2</td>
+                <td>₹8–15Cr</td>
+                <td>₹3–6Cr</td>
+                <td>₹3–7Cr</td>
+                <td class="rev-combined"><strong>₹14–28Cr</strong></td>
+              </tr>
+              <tr>
+                <td class="rev-year">Y3</td>
+                <td>₹20–35Cr</td>
+                <td>₹6–12Cr</td>
+                <td>₹6–14Cr</td>
+                <td class="rev-combined"><strong>₹32–61Cr</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="revenue-headline">
+            <span class="revenue-headline-label">Y3 Combined</span>
+            <span class="revenue-headline-value" data-count="61">0</span>
+            <span class="revenue-headline-suffix">Cr (up to)</span>
+          </div>
+        </div>
+
+        <!-- Ideal Case -->
+        <div class="revenue-card revenue-card-highlight">
+          <div class="revenue-card-header">
+            <span class="revenue-card-badge revenue-card-badge-highlight">🚀 Aggressive</span>
+            <h3>Ideal Case</h3>
+          </div>
+          <table class="revenue-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>🏠 Real Estate</th>
+                <th>🏥 Healthcare</th>
+                <th>🎓 EdTech</th>
+                <th class="rev-combined">Combined</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rev-year">Y1</td>
+                <td>₹6–10Cr</td>
+                <td>₹4–6Cr</td>
+                <td>₹4–8Cr</td>
+                <td class="rev-combined"><strong>₹14–24Cr</strong></td>
+              </tr>
+              <tr>
+                <td class="rev-year">Y2</td>
+                <td>₹20–40Cr</td>
+                <td>₹8–15Cr</td>
+                <td>₹10–18Cr</td>
+                <td class="rev-combined"><strong>₹38–73Cr</strong></td>
+              </tr>
+              <tr>
+                <td class="rev-year">Y3</td>
+                <td>₹50–80Cr</td>
+                <td>₹15–25Cr</td>
+                <td>₹20–35Cr</td>
+                <td class="rev-combined"><strong>₹85–140Cr</strong></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="revenue-headline">
+            <span class="revenue-headline-label">Y3 Combined</span>
+            <span class="revenue-headline-value" data-count="140">0</span>
+            <span class="revenue-headline-suffix">Cr (up to)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════ GTM PLAYBOOK ═══════════════════ -->
   <section id="gtm" class="section">
     <div class="container">
@@ -484,6 +725,111 @@
     </div>
   </section>
 
+  <!-- ═══════════════════ RISK ASSESSMENT ═══════════════════ -->
+  <section id="risks" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Section 04B</span>
+        <h2 class="section-title">Risk Assessment</h2>
+        <p class="section-desc">Five key risks with probability-weighted analysis — overall risk profile: <strong>Medium</strong>, manageable with disciplined pilot design.</p>
+      </div>
+
+      <div class="risk-grid">
+        <div class="risk-card">
+          <div class="risk-card-header">
+            <h4>Automation Below Target</h4>
+            <div class="risk-badges">
+              <span class="risk-badge risk-badge-medium">Prob: Medium</span>
+              <span class="risk-badge risk-badge-high">Impact: High</span>
+            </div>
+          </div>
+          <p class="risk-desc">Margins lower than modeled; human cost grows faster than revenue.</p>
+          <div class="risk-mitigation">
+            <span class="risk-mit-label">Mitigation</span>
+            <p>Narrow Pilot 1 scope to clearly standardized workflows only. Kill pilot if &lt;50% automation by Week 8.</p>
+          </div>
+        </div>
+
+        <div class="risk-card">
+          <div class="risk-card-header">
+            <h4>Lead Quality Deterioration</h4>
+            <div class="risk-badges">
+              <span class="risk-badge risk-badge-high">Prob: High</span>
+              <span class="risk-badge risk-badge-medium">Impact: Medium</span>
+            </div>
+          </div>
+          <p class="risk-desc">SquadStack bears full variable cost but earns zero success fee on junk leads.</p>
+          <div class="risk-mitigation">
+            <span class="risk-mit-label">Mitigation</span>
+            <p>Contractual valid-lead definitions and daily lead-quality dashboards. Switch to hybrid model if pure outcome shows losses.</p>
+          </div>
+        </div>
+
+        <div class="risk-card">
+          <div class="risk-card-header">
+            <h4>Integration Drag</h4>
+            <div class="risk-badges">
+              <span class="risk-badge risk-badge-high">Prob: High</span>
+              <span class="risk-badge risk-badge-medium">Impact: Medium</span>
+            </div>
+          </div>
+          <p class="risk-desc">Time-to-revenue stretched; pilot data arrives late for decision gates.</p>
+          <div class="risk-mitigation">
+            <span class="risk-mit-label">Mitigation</span>
+            <p>Use webhook or CSV-based integration for Pilot 1; deep CRM only post-success. Accept manual data entry for first 4 weeks if necessary.</p>
+          </div>
+        </div>
+
+        <div class="risk-card">
+          <div class="risk-card-header">
+            <h4>Competitor AI Entry</h4>
+            <div class="risk-badges">
+              <span class="risk-badge risk-badge-medium">Prob: Medium–High</span>
+              <span class="risk-badge risk-badge-high">Impact: High</span>
+            </div>
+          </div>
+          <p class="risk-desc">Pricing pressure, need for faster category lock-in.</p>
+          <div class="risk-mitigation">
+            <span class="risk-mit-label">Mitigation</span>
+            <p>Build vertical-specific playbooks and QA IP, not generic voice bots. Accelerate case study publication and reference accounts.</p>
+          </div>
+        </div>
+
+        <div class="risk-card">
+          <div class="risk-card-header">
+            <h4>LLM &amp; Telecom Cost Inflation</h4>
+            <div class="risk-badges">
+              <span class="risk-badge risk-badge-medium">Prob: Medium</span>
+              <span class="risk-badge risk-badge-medium">Impact: Medium</span>
+            </div>
+          </div>
+          <p class="risk-desc">Margin compression on high-volume, low-ACV accounts (especially Healthcare).</p>
+          <div class="risk-mitigation">
+            <span class="risk-mit-label">Mitigation</span>
+            <p>Ongoing model optimization; fallback to cheaper LLM alternatives. Re-price accounts with pass-through clauses on cost spikes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Summary -->
+      <div class="risk-summary">
+        <div class="risk-summary-header">Overall Risk Profile</div>
+        <div class="risk-meter">
+          <div class="risk-meter-track">
+            <div class="risk-meter-fill"></div>
+            <div class="risk-meter-marker"></div>
+          </div>
+          <div class="risk-meter-labels">
+            <span>Low</span>
+            <span class="risk-meter-active">Medium</span>
+            <span>High</span>
+          </div>
+        </div>
+        <p class="risk-summary-text">Manageable with disciplined pilot design and clear Go/No-Go gates.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════ EXECUTION PLAN ═══════════════════ -->
   <section id="execution" class="section section-dark">
     <div class="container">
@@ -493,62 +839,105 @@
         <p class="section-desc">Strategy is only as good as its execution velocity.</p>
       </div>
 
+      <!-- 30-Day Action Plan -->
       <div class="exec-timeline">
         <div class="exec-phase" data-phase="1">
           <div class="exec-phase-sidebar">
-            <div class="exec-phase-weeks">Week 1–2</div>
+            <div class="exec-phase-weeks">Days 0–7</div>
             <div class="exec-phase-line"></div>
           </div>
           <div class="exec-phase-content">
-            <div class="exec-phase-badge">🗺️ Foundation</div>
-            <h3>From Framework to War Room</h3>
-            <p>Before any outreach begins, spend the first two weeks building the internal operating infrastructure for the expansion:</p>
+            <div class="exec-phase-badge">🔍 Discovery</div>
+            <h3>Discovery &amp; Validation</h3>
+            <p>Walk founders and the sales team through the scoring rubric. Stress-test the vertical rankings with internal deal data.</p>
             <ul class="exec-checklist">
-              <li><span class="check-icon">◆</span> Stakeholder mapping across all target verticals</li>
-              <li><span class="check-icon">◆</span> ICP shortlists — identifying the right buyers at the right companies</li>
+              <li><span class="check-icon">◆</span> Stress-test vertical rankings with internal deal data</li>
+              <li><span class="check-icon">◆</span> Collect baselines from existing verticals (fintech, logistics) to benchmark new segment economics</li>
             </ul>
           </div>
         </div>
 
         <div class="exec-phase" data-phase="2">
           <div class="exec-phase-sidebar">
-            <div class="exec-phase-weeks">Week 3–4</div>
+            <div class="exec-phase-weeks">Days 7–14</div>
             <div class="exec-phase-line"></div>
           </div>
           <div class="exec-phase-content">
-            <div class="exec-phase-badge">💬 Validation</div>
-            <h3>Getting the First Conversations Right</h3>
-            <p>The first 3–4 prospect conversations in a new vertical are <strong>disproportionately important</strong> — they either validate or invalidate the entire vertical thesis faster than any desk research can.</p>
+            <div class="exec-phase-badge">🎯 Targeting</div>
+            <h3>Target Account Selection</h3>
+            <p>Build a list of <strong>20–30 target accounts</strong> across Real Estate, Healthcare, and EdTech using LinkedIn, company databases, and SquadStack's inbound signals.</p>
             <ul class="exec-checklist">
-              <li><span class="check-icon">◆</span> Build the pilot offer narrative for each vertical</li>
-              <li><span class="check-icon">◆</span> Work with Sales to run the first calls as structured discovery</li>
+              <li><span class="check-icon">◆</span> Prioritize accounts showing public signals of high digital ad spend (Meta Ads Library, Google Trends)</li>
+              <li><span class="check-icon">◆</span> Map stakeholders — VP of Sales / CMO at each target</li>
             </ul>
           </div>
         </div>
 
         <div class="exec-phase" data-phase="3">
           <div class="exec-phase-sidebar">
-            <div class="exec-phase-weeks">Week 5–12</div>
+            <div class="exec-phase-weeks">Days 14–30</div>
             <div class="exec-phase-line"></div>
           </div>
           <div class="exec-phase-content">
-            <div class="exec-phase-badge exec-phase-badge-highlight">🚀 Execution</div>
-            <h3>Owning the Pilot as a Product</h3>
-            <p>A pilot in a new vertical is not a Sales problem or a Delivery problem. In the Founder's Office, <strong>it is my problem end to end</strong>.</p>
-            <div class="exec-result-card">
-              <div class="exec-result-icon">📊</div>
-              <p>Translating pilot data into a <strong>Go / No-Go recommendation</strong> for the founders at Week 12, backed by the unit economics framework.</p>
+            <div class="exec-phase-badge exec-phase-badge-highlight">🚀 Pilot Design</div>
+            <h3>Pilot Design &amp; First Conversations</h3>
+            <p>Draft pilot offer templates for each vertical with explicit pricing, success metrics, and scope.</p>
+            <ul class="exec-checklist">
+              <li><span class="check-icon">◆</span> Prepare founder-led first conversations using this framework as supporting material</li>
+              <li><span class="check-icon">◆</span> Use lightweight automation (webhooks, Google Sheets pipelines) for Pilot 1 without waiting on engineering sprints</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decision Gates -->
+      <div class="decision-gates">
+        <h3 class="gates-title">Go / No-Go Decision Gates</h3>
+        <div class="gates-grid">
+          <div class="gate-card">
+            <div class="gate-marker">◆</div>
+            <div class="gate-header">
+              <span class="gate-week">Week 12</span>
+              <h4>Decision Gate 1</h4>
             </div>
+            <table class="gate-table">
+              <thead>
+                <tr><th>Vertical</th><th class="gate-go">Go ✓</th><th class="gate-nogo">No-Go ✗</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Real Estate</td><td class="gate-go">Reachability ≥1.5x; Visit uplift ≥20%</td><td class="gate-nogo">Both below target</td></tr>
+                <tr><td>Healthcare</td><td class="gate-go">Missed-call recovery ≥70%; Zero medical incidents</td><td class="gate-nogo">Recovery &lt;50% or compliance issues</td></tr>
+                <tr><td>EdTech</td><td class="gate-go">Support query automation ≥60–65%</td><td class="gate-nogo">&lt;50% automation; CSAT &lt;3.8</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="gate-card">
+            <div class="gate-marker">◆</div>
+            <div class="gate-header">
+              <span class="gate-week">Week 24</span>
+              <h4>Decision Gate 2</h4>
+            </div>
+            <table class="gate-table">
+              <thead>
+                <tr><th>Vertical</th><th class="gate-go">Go ✓</th><th class="gate-nogo">No-Go ✗</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Real Estate</td><td class="gate-go">2+ logos sign at ₹40L+ ACV</td><td class="gate-nogo">&lt;1 logo; CAC &gt;₹3L</td></tr>
+                <tr><td>Healthcare</td><td class="gate-go">1 chain signs at ₹15L+ with renewal intent</td><td class="gate-nogo">CAC &gt;₹2L; ACV below floor</td></tr>
+                <tr><td>EdTech</td><td class="gate-go">1 platform signs for support scope at ₹50L+</td><td class="gate-nogo">&lt;1 signs; counselor cost unchanged</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
 
       <div class="execution-result">
         <div class="result-metric">
-          <span class="result-number" data-count="12">0</span>
-          <span class="result-unit"> Week Sprint</span>
+          <span class="result-number" data-count="30">0</span>
+          <span class="result-unit"> Day Sprint</span>
         </div>
-        <p>From framework to war room to validated pilot — delivering a data-backed Go/No-Go recommendation to founders.</p>
+        <p>"I will not only help decide where to go next but build the systems and structure to learn fast, de-risk expansion bets with real pilot data, and translate strategy into ground-level execution."</p>
       </div>
     </div>
   </section>

@@ -1805,6 +1805,669 @@ img {
   }
 }
 
+/* ═══════════════════════════════════════════════════
+   SIX LEVERS
+   ═══════════════════════════════════════════════════ */
+.levers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+.lever-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: all 0.4s var(--ease-out);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.lever-card:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.lever-rank {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.6;
+  line-height: 1;
+  min-width: 48px;
+  text-align: center;
+}
+
+.lever-card[data-rank="1"] .lever-rank,
+.lever-card[data-rank="2"] .lever-rank {
+  opacity: 1;
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.lever-card[data-rank="5"] .lever-rank,
+.lever-card[data-rank="6"] .lever-rank {
+  opacity: 0.35;
+}
+
+.lever-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.lever-mechanism {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.lever-mechanism strong {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+.lever-timeline {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+}
+
+.lever-timeline-fast {
+  color: var(--accent);
+  border-color: var(--border-accent);
+  background: var(--accent-glow);
+}
+
+.lever-timeline-slow {
+  color: var(--amber);
+  border-color: rgba(245, 158, 11, 0.2);
+  background: var(--amber-glow);
+}
+
+/* ═══════════════════════════════════════════════════
+   TAM FUNNEL (inside vertical panels)
+   ═══════════════════════════════════════════════════ */
+.panel-funnel {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.panel-funnel h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.funnel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.funnel-tier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  transition: transform 0.3s var(--ease-out);
+  text-align: center;
+}
+
+.funnel-tier:hover {
+  transform: scale(1.02);
+}
+
+.funnel-tam {
+  width: 100%;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.funnel-sam {
+  width: 80%;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.funnel-som {
+  width: 60%;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.funnel-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  min-width: 50px;
+}
+
+.funnel-sam .funnel-label { color: var(--blue); }
+.funnel-som .funnel-label { color: var(--purple); }
+
+.funnel-value {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+}
+
+/* ═══════════════════════════════════════════════════
+   CALL-TYPE BARS (inside vertical panels)
+   ═══════════════════════════════════════════════════ */
+.panel-calltype {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.panel-calltype h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.calltype-bar {
+  display: flex;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.calltype-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: filter 0.3s;
+}
+
+.calltype-segment:hover {
+  filter: brightness(1.2);
+}
+
+.calltype-ai {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  color: #000;
+}
+
+.calltype-human {
+  background: rgba(245, 158, 11, 0.3);
+  color: var(--amber);
+}
+
+.calltype-legend {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.calltype-item {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.calltype-item::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.calltype-item-ai::before {
+  background: var(--accent);
+}
+
+.calltype-item-human::before {
+  background: var(--amber);
+}
+
+/* ═══════════════════════════════════════════════════
+   REVENUE TRAJECTORIES
+   ═══════════════════════════════════════════════════ */
+.revenue-scenarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+.revenue-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.revenue-card-highlight {
+  border-color: var(--border-accent);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(16, 185, 129, 0.04) 100%);
+}
+
+.revenue-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.revenue-card-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.revenue-card-badge-highlight {
+  color: var(--accent);
+  border-color: var(--border-accent);
+  background: var(--accent-glow);
+}
+
+.revenue-card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.revenue-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.revenue-table thead th {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.revenue-table tbody td {
+  font-size: 0.85rem;
+  padding: 0.7rem 0.5rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.rev-year {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-primary) !important;
+}
+
+.rev-combined {
+  color: var(--accent) !important;
+}
+
+.revenue-headline {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.revenue-headline-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.revenue-headline-value {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.revenue-headline-suffix {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ═══════════════════════════════════════════════════
+   RISK ASSESSMENT
+   ═══════════════════════════════════════════════════ */
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.risk-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s var(--ease-out);
+}
+
+.risk-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.risk-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.risk-card-header h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.risk-badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.risk-badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.risk-badge-high {
+  color: var(--red);
+  background: var(--red-glow);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.risk-badge-medium {
+  color: var(--amber);
+  background: var(--amber-glow);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.risk-badge-low {
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid var(--border-accent);
+}
+
+.risk-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.risk-mitigation {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.risk-mit-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.35rem;
+}
+
+.risk-mitigation p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Risk Summary Meter */
+.risk-summary {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.risk-summary-header {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.risk-meter {
+  max-width: 400px;
+  margin: 0 auto 1rem;
+}
+
+.risk-meter-track {
+  height: 10px;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--amber) 50%, var(--red) 100%);
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.risk-meter-fill {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.risk-meter-marker {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: var(--amber);
+  border: 3px solid var(--bg-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--amber-glow);
+}
+
+.risk-meter-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.risk-meter-active {
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.risk-summary-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ═══════════════════════════════════════════════════
+   DECISION GATES (inside execution section)
+   ═══════════════════════════════════════════════════ */
+.decision-gates {
+  margin-top: 3rem;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.gates-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+.gate-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.gate-marker {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4rem;
+  color: var(--accent);
+  background: var(--bg-secondary);
+  padding: 0 0.5rem;
+}
+
+.gate-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.gate-week {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.gate-header h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.gate-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.gate-table thead th {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.gate-table tbody td {
+  padding: 0.6rem 0.5rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.gate-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.gate-go {
+  color: var(--accent) !important;
+}
+
+.gate-nogo {
+  color: var(--red) !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE ADDITIONS
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .levers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-scenarios {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funnel-sam { width: 90%; }
+  .funnel-som { width: 80%; }
+}
+
 @media (max-width: 480px) {
   .hero-title {
     font-size: 2.5rem;
@@ -1816,5 +2479,23 @@ img {
 
   .pricing-cards {
     grid-template-columns: 1fr;
+  }
+
+  .lever-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .lever-rank {
+    font-size: 1.5rem;
+    min-width: 36px;
+  }
+
+  .revenue-table {
+    font-size: 0.75rem;
+  }
+
+  .gate-table {
+    font-size: 0.7rem;
   }
 }

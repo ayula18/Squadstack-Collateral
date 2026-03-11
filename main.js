@@ -252,6 +252,91 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// ─── Six Levers Cards ───
+document.querySelectorAll('.lever-card').forEach((card, i) => {
+  gsap.to(card, {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    delay: i * 0.1,
+    scrollTrigger: {
+      trigger: card,
+      start: 'top 85%',
+      once: true,
+    },
+  });
+});
+
+// ─── Revenue Cards ───
+document.querySelectorAll('.revenue-card').forEach((card, i) => {
+  gsap.to(card, {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    delay: i * 0.2,
+    scrollTrigger: {
+      trigger: card,
+      start: 'top 80%',
+      once: true,
+    },
+  });
+});
+
+// Revenue headline counters
+document.querySelectorAll('.revenue-headline-value').forEach(el => {
+  const target = parseInt(el.dataset.count, 10);
+  gsap.to(el, {
+    innerText: target,
+    duration: 1.5,
+    ease: 'power2.out',
+    snap: { innerText: 1 },
+    scrollTrigger: {
+      trigger: el,
+      start: 'top 85%',
+      once: true,
+    },
+  });
+});
+
+// ─── Risk Cards ───
+document.querySelectorAll('.risk-card').forEach((card, i) => {
+  gsap.to(card, {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    delay: i * 0.1,
+    scrollTrigger: {
+      trigger: card,
+      start: 'top 85%',
+      once: true,
+    },
+  });
+});
+
+// Risk summary
+gsap.to('.risk-summary', {
+  opacity: 1,
+  y: 0,
+  duration: 0.8,
+  scrollTrigger: {
+    trigger: '.risk-summary',
+    start: 'top 85%',
+    once: true,
+  },
+});
+
+// ─── Decision Gates ───
+gsap.to('.decision-gates', {
+  opacity: 1,
+  y: 0,
+  duration: 0.8,
+  scrollTrigger: {
+    trigger: '.decision-gates',
+    start: 'top 80%',
+    once: true,
+  },
+});
+
 // ─── Equation hover effects ───
 document.querySelectorAll('.eq-var').forEach(v => {
   v.addEventListener('mouseenter', () => {
@@ -261,3 +346,4 @@ document.querySelectorAll('.eq-var').forEach(v => {
     gsap.to(v, { scale: 1, duration: 0.3, ease: 'power2.out' });
   });
 });
+
